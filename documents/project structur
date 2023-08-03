@@ -1,0 +1,46 @@
+E-Commerce Project Entities
+-----------------------------------
+User
+Full Name
+List<Address>
+List<Order> (We can limit to have one order at the same time)
+mobileNumber
+—---------------------------------------------
+Role (User should have a role for authorization)
+Admin
+Customer
+—-------------------------------------------------
+Product
+title
+Description
+List<String> -> Image Urls
+Thumbnail
+Price
+Quantity
+is bookmarked
+category
+subCategory
+—--------------------------------------------------------------
+Category
+id
+Name
+—-----------------------------------------------------
+SubCategory
+id
+name
+categoryId
+—--------------------------------------------
+Order
+—-----------------------------
+Receipt
+—-----------------------------------------
+Address
+—-------------------------------------------------------------
+Transaction History (Maybe it’s not necessary)
+—---------------------------------------------
+
+—--------------extra info—-----------------
+Each user has a wallet
+Each Wallet has balance.
+User can increase balance amount.
+Default Payment Method is using wallet.

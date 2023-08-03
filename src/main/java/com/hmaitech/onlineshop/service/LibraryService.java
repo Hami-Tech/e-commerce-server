@@ -4,17 +4,35 @@ import com.hmaitech.onlineshop.model.dto.LibraryDto;
 import com.hmaitech.onlineshop.model.entity.Library;
 import com.hmaitech.onlineshop.model.mapper.LibraryMapper;
 import com.hmaitech.onlineshop.repository.LibraryRepository;
-import lombok.AllArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-@AllArgsConstructor
+////@AllArgsConstructor
+//@Singular
 public class LibraryService implements BaseService<LibraryDto> {
 
 
-    private final LibraryRepository libraryRepository;
+    private static LibraryService instance;
 
-    private final LibraryMapper libraryMapper;
+    private LibraryService() {
+    }
+
+    public static LibraryService getInstance() {
+        if (instance == null) {
+            instance = new LibraryService();
+            return instance;
+        }
+        return instance;
+    }
+
+
+    @Autowired
+    private LibraryRepository libraryRepository;
+
+
+    @Autowired
+    private LibraryMapper libraryMapper;
 
 
     public LibraryDto save(LibraryDto libraryDto) {

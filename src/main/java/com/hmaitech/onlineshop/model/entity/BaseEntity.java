@@ -1,10 +1,7 @@
 package com.hmaitech.onlineshop.model.entity;
 
 
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.MappedSuperclass;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -28,13 +25,19 @@ public class BaseEntity {
 
 
     @CreatedDate
-    private Instant createDate;
+    @Column(updatable = false)
+    private final Instant createDate = Instant.now();
 
     @LastModifiedDate
-    private Instant updateDate;
+    private Instant updateDate = Instant.now();
 
 
-    private Boolean deleted;
+    @Column(columnDefinition = "integer", length = 1)
+    private Boolean deleted = false;
+
+
+    @Version
+    private Integer version;
 
 
 }
