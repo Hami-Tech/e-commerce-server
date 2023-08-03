@@ -1,7 +1,7 @@
-package com.example.libraryspringv1.model.mapper;
+package com.hmaitech.onlineshop.model.mapper;
 
-import com.example.libraryspringv1.model.dto.LibraryDto;
-import com.example.libraryspringv1.model.entity.Library;
+import com.hmaitech.onlineshop.model.dto.LibraryDto;
+import com.hmaitech.onlineshop.model.entity.Library;
 import lombok.Data;
 import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Component;

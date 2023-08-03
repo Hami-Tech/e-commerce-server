@@ -1,4 +1,4 @@
-package com.example.libraryspringv1.model.dto;
+package com.hmaitech.onlineshop.model.dto;
 
 
 import lombok.AllArgsConstructor;

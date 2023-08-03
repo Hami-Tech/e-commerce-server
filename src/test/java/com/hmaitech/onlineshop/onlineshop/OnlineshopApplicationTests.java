@@ -1,10 +1,10 @@
-package com.hmaitech.onlineshop.src.test.java.com.example.libraryspringv1;
+package com.hmaitech.onlineshop.onlineshop;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class LibrarySpringV1ApplicationTests {
+class OnlineshopApplicationTests {
 
     @Test
     void contextLoads() {

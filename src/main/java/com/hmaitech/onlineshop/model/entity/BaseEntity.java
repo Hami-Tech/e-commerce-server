@@ -1,7 +1,10 @@
-package com.example.libraryspringv1.model.entity;
+package com.hmaitech.onlineshop.model.entity;
 
 
-import jakarta.persistence.*;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.MappedSuperclass;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -32,7 +35,6 @@ public class BaseEntity {
 
 
     private Boolean deleted;
-
 
 
 }
