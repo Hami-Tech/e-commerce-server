@@ -3,13 +3,12 @@ package com.hmaitech.onlineshop.model.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
-import org.hibernate.Hibernate;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
+import org.springframework.stereotype.Component;
 
 import java.io.Serializable;
 import java.time.Instant;
-import java.util.Objects;
 
 
 @Data
@@ -18,6 +17,7 @@ import java.util.Objects;
 @AllArgsConstructor
 @MappedSuperclass
 @Builder
+@Component
 public class BaseEntity implements Serializable {
 
     @Id

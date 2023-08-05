@@ -14,9 +14,9 @@ public abstract class BasController<S extends BaseService<D>, D> {
     @Autowired
     public S service;
 
-    protected BasController(S service) {
-        this.service = service;
-    }
+//    protected BasController(S service) {
+//        this.service = service;
+//    }
 
 
     @PostMapping("/save")

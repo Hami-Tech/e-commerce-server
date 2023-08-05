@@ -5,11 +5,13 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
-import lombok.*;
-import org.hibernate.Hibernate;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
-import java.util.Objects;
 
 @Entity(name = "productEntity")
 @Table(name = "Product")
@@ -17,6 +19,7 @@ import java.util.Objects;
 @AllArgsConstructor
 @Data
 @ToString
+@Component
 public class ProductEntity extends BaseEntity {
 
     private String title;

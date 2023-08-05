@@ -8,23 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-////@AllArgsConstructor
-//@Singular
 public class LibraryService implements BaseService<LibraryDto> {
-
-
-    private static LibraryService instance;
-
-    private LibraryService() {
-    }
-
-    public static LibraryService getInstance() {
-        if (instance == null) {
-            instance = new LibraryService();
-            return instance;
-        }
-        return instance;
-    }
 
 
     @Autowired
@@ -36,6 +20,7 @@ public class LibraryService implements BaseService<LibraryDto> {
 
 
     public LibraryDto save(LibraryDto libraryDto) {
+
         Library library = libraryRepository.save(libraryMapper.dtoToEntity(libraryDto));
 
         return libraryMapper.entityToDto(library);

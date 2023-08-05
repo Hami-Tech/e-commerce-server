@@ -4,12 +4,14 @@ import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
-import lombok.*;
-import org.hibernate.Hibernate;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
+import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 
 @Entity(name = "orderEntity")
 @Table(name = "Orders")
@@ -17,6 +19,7 @@ import java.util.Objects;
 @AllArgsConstructor
 @ToString
 @Data
+@Component
 public class OrderEntity extends BaseEntity {
 
 

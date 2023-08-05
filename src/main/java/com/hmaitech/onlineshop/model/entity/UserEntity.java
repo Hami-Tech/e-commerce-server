@@ -1,37 +1,45 @@
 package com.hmaitech.onlineshop.model.entity;
 
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.OneToMany;
-import jakarta.persistence.Table;
-import jakarta.persistence.Transient;
-import lombok.*;
-import org.hibernate.Hibernate;
+import com.hmaitech.onlineshop.model.enums.Role;
+import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
+import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 
 
 @Entity(name = "userEntity")
-@Table(name = "User")
+@Table(name = "Users")
 @Data
 @ToString
 @NoArgsConstructor
 @AllArgsConstructor
+@Component
 public class UserEntity extends BaseEntity {
 
-    private String name;
 
+    @Column(name = "FIRST_NAME", length = 50)
+    private String name;
+    @Column(name = "LAST_NAME", length = 50)
     private String family;
+
+    @Enumerated(EnumType.STRING)
+    private Role role;
 
     @Transient
     private String fullName;
 
     @OneToMany
+    @ToString.Exclude
     private List<AddressEntity> addressEntities = new ArrayList<>();
 
     @OneToMany
+    @ToString.Exclude
     private List<OrderEntity> orderEntities = new ArrayList<>();
 
 
@@ -39,5 +47,11 @@ public class UserEntity extends BaseEntity {
 
     private String mobileNumber;
 
+    public String getFullName() {
+        return fullName;
+    }
 
+    public void setFullName(String fullName) {
+        this.fullName = this.name + " " + this.family;
+    }
 }

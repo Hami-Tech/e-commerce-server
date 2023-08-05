@@ -5,12 +5,14 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
-import lombok.*;
-import org.hibernate.Hibernate;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
+import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 
 @Entity(name = "categoryEntity")
 @Table(name = "Category")
@@ -18,6 +20,7 @@ import java.util.Objects;
 @AllArgsConstructor
 @Data
 @ToString
+@Component
 
 public class CategoryEntity extends BaseEntity {
 

@@ -3,10 +3,11 @@ package com.hmaitech.onlineshop.model.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
-import lombok.*;
-import org.hibernate.Hibernate;
-
-import java.util.Objects;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
+import org.springframework.stereotype.Component;
 
 @Entity(name = "receiptEntity")
 @Table(name = "Receipt")
@@ -14,6 +15,7 @@ import java.util.Objects;
 @AllArgsConstructor
 @Data
 @ToString
+@Component
 public class ReceiptEntity extends BaseEntity{
 
     private String name;
