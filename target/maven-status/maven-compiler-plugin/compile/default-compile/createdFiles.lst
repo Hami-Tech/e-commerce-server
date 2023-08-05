@@ -1,0 +1,13 @@
+com\hmaitech\onlineshop\controller\LibraryController.class
+com\hmaitech\onlineshop\model\mapper\LibraryMapper.class
+com\hmaitech\onlineshop\service\BaseService.class
+com\hmaitech\onlineshop\model\entity\BaseEntity.class
+com\hmaitech\onlineshop\model\entity\Library.class
+com\hmaitech\onlineshop\model\mapper\BaseMapper.class
+com\hmaitech\onlineshop\model\entity\BaseEntity$BaseEntityBuilder.class
+com\hmaitech\onlineshop\model\dto\LibraryDto.class
+com\hmaitech\onlineshop\model\mapper\BaseAbstractMapper.class
+com\hmaitech\onlineshop\service\LibraryService.class
+com\hmaitech\onlineshop\repository\LibraryRepository.class
+com\hmaitech\onlineshop\controller\BasController.class
+com\hmaitech\onlineshop\Server.class

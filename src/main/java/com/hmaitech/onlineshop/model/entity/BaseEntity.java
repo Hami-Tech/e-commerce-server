@@ -2,22 +2,23 @@ package com.hmaitech.onlineshop.model.entity;
 
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
+import org.hibernate.Hibernate;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
 
+import java.io.Serializable;
 import java.time.Instant;
+import java.util.Objects;
 
 
 @Data
+@ToString
 @NoArgsConstructor
 @AllArgsConstructor
 @MappedSuperclass
 @Builder
-public class BaseEntity {
+public class BaseEntity implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
