@@ -23,7 +23,7 @@
 *.idea
 *.jpb
 *.mvn
-target
+*target
 HELP.md
 mvnw
 mvnw.cmd

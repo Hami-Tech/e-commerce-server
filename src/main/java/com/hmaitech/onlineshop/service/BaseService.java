@@ -7,4 +7,6 @@ import org.springframework.stereotype.Service;
 public interface BaseService<D> {
 
     D save(D dto);
+
+    D findById(Long id);
 }

@@ -18,23 +18,7 @@ public abstract class BaseAbstractMapper<E extends BaseEntity, D extends Library
     @Autowired
     private E entity;
 
-//    @Override
-//    public E dtoToEntity(LibraryDto libraryDto) {
-//        Library library = new Library();
-//        BeanUtils.copyProperties(libraryDto, library);
-//        return library;
-//
-//
-//    }
-//
-//
-//    public LibraryDto entityToDto(Library library) {
-//
-//        LibraryDto libraryDto = new LibraryDto();
-//        BeanUtils.copyProperties(library, libraryDto);
-//        return libraryDto;
-//
-//    }
+
 
     public E dtoToEntity(D dto) {
         BeanUtils.copyProperties(dto, entity);
