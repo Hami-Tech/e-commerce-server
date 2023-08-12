@@ -7,24 +7,6 @@ import org.springframework.stereotype.Component;
 
 @Data
 @Component
-
 public class LibraryMapper extends BaseAbstractMapper<Library, LibraryDto> {
 
-//    @Override
-//    public Library dtoToEntity(LibraryDto libraryDto) {
-//        Library library = new Library();
-//        BeanUtils.copyProperties(libraryDto, library);
-//        return library;
-//
-//
-//    }
-//
-//
-//    public LibraryDto entityToDto(Library library) {
-//
-//        LibraryDto libraryDto = new LibraryDto();
-//        BeanUtils.copyProperties(library, libraryDto);
-//        return libraryDto;
-//
-//    }
 }

@@ -1,6 +1,5 @@
 package com.hmaitech.onlineshop.model.dto;
 
-
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.stereotype.Component;
@@ -9,10 +8,15 @@ import org.springframework.stereotype.Component;
 @NoArgsConstructor
 //@AllArgsConstructor
 @Component
-public class LibraryDto extends BaseDto {
+public class BaseDto {
 
 
-    private String name;
+//    @CreatedDate
+////    @Column(updatable = false)
+//    private Instant createDate;
+//
+//    @LastModifiedDate
+//    private Instant updateDate;
 
 
 }

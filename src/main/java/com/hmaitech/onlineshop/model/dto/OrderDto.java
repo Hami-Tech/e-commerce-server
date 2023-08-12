@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 @NoArgsConstructor
 //@AllArgsConstructor
 @Component
-public class LibraryDto extends BaseDto {
+public class OrderDto extends BaseDto {
 
 
     private String name;

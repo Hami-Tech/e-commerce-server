@@ -4,21 +4,26 @@ package com.hmaitech.onlineshop.model.entity;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
-import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.ToString;
+import org.hibernate.envers.Audited;
 import org.springframework.stereotype.Component;
 
 @Entity(name = "pathEntity")
 @Table(name = "Path")
 @NoArgsConstructor
 @AllArgsConstructor
-@Data
-@ToString
 @Component
-public class PathEntity extends BaseEntity{
+@Audited
+public class PathEntity extends BaseEntity {
 
     private String path;
 
 
+    public String getPath() {
+        return path;
+    }
+
+    public void setPath(String path) {
+        this.path = path;
+    }
 }
