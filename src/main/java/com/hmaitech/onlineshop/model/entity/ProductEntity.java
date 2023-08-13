@@ -6,7 +6,9 @@ import jakarta.persistence.OneToMany;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 import org.hibernate.envers.Audited;
 import org.springframework.stereotype.Component;
 
@@ -18,6 +20,8 @@ import java.util.List;
 @AllArgsConstructor
 @Component
 @Audited
+@Getter
+@Setter
 public class ProductEntity extends BaseEntity {
 
     private String title;
@@ -34,59 +38,4 @@ public class ProductEntity extends BaseEntity {
     private CategoryEntity categoryEntity;
 
 
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public String getDescription() {
-        return Description;
-    }
-
-    public void setDescription(String description) {
-        Description = description;
-    }
-
-    public List<PathEntity> getImageUrls() {
-        return imageUrls;
-    }
-
-    public void setImageUrls(List<PathEntity> imageUrls) {
-        this.imageUrls = imageUrls;
-    }
-
-    public Double getPrice() {
-        return Price;
-    }
-
-    public void setPrice(Double price) {
-        Price = price;
-    }
-
-    public Integer getQuantity() {
-        return Quantity;
-    }
-
-    public void setQuantity(Integer quantity) {
-        Quantity = quantity;
-    }
-
-    public Boolean getBookmarked() {
-        return isBookmarked;
-    }
-
-    public void setBookmarked(Boolean bookmarked) {
-        isBookmarked = bookmarked;
-    }
-
-    public CategoryEntity getCategoryEntity() {
-        return categoryEntity;
-    }
-
-    public void setCategoryEntity(CategoryEntity categoryEntity) {
-        this.categoryEntity = categoryEntity;
-    }
 }

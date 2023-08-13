@@ -2,9 +2,7 @@ package com.hmaitech.onlineshop.model.entity;
 
 
 import jakarta.persistence.Entity;
-import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
+import lombok.*;
 import org.hibernate.envers.Audited;
 import org.springframework.stereotype.Component;
 
@@ -14,16 +12,11 @@ import org.springframework.stereotype.Component;
 @ToString
 @Component
 @Audited
-
+@Getter
+@Setter
 public class Library extends BaseEntity {
 
     private String name;
 
-    public String getName() {
-        return name;
-    }
 
-    public void setName(String name) {
-        this.name = name;
-    }
 }

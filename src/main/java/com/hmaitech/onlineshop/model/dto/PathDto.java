@@ -1,13 +1,17 @@
 package com.hmaitech.onlineshop.model.dto;
 
 
-import lombok.Data;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 import org.springframework.stereotype.Component;
 
-@Data
+@Getter
+@Setter
 @NoArgsConstructor
-//@AllArgsConstructor
+@AllArgsConstructor
 @Component
 public class PathDto extends BaseDto {
+    private String path;
 }

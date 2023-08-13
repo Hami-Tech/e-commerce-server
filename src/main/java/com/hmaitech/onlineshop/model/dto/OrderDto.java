@@ -1,18 +1,18 @@
 package com.hmaitech.onlineshop.model.dto;
 
 
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import org.springframework.stereotype.Component;
 
-@Data
+@Getter
+@Setter
 @NoArgsConstructor
-//@AllArgsConstructor
+@AllArgsConstructor
 @Component
 public class OrderDto extends BaseDto {
 
 
-    private String name;
+    private Boolean status;
 
 
 }

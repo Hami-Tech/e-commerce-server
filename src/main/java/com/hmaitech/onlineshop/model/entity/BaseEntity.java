@@ -2,10 +2,7 @@ package com.hmaitech.onlineshop.model.entity;
 
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
+import lombok.*;
 import org.hibernate.envers.Audited;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
@@ -18,9 +15,10 @@ import java.time.Instant;
 
 @MappedSuperclass
 @ToString
-@NoArgsConstructor
 @AllArgsConstructor
-@Data
+@Getter
+@Setter
+@RequiredArgsConstructor
 @Component
 @EntityListeners(AuditingEntityListener.class)
 @Audited
@@ -44,36 +42,5 @@ public abstract class BaseEntity implements Serializable {
 
     @Version
     private Integer version;
-//
-//    public Long getId() {
-//        return id;
-//    }
-//
-//    public Date getCreateDate() {
-//        return createDate;
-//    }
-//
-//    public void setCreateDate(Date createDate) {
-//        this.createDate = createDate;
-//    }
-//
-//    public Date getUpdateDate() {
-//        return updateDate;
-//    }
-//
-//    public void setUpdateDate(Date updateDate) {
-//        this.updateDate = updateDate;
-//    }
-//
-//    public Boolean getDeleted() {
-//        return deleted;
-//    }
-//
-//    public void setDeleted(Boolean deleted) {
-//        this.deleted = deleted;
-//    }
-//
-//    public Integer getVersion() {
-//        return version;
-//    }
+
 }
